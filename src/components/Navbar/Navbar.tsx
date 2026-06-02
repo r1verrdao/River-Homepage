@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
   { label: "About", href: "about" },
@@ -102,7 +103,13 @@ export default function Navbar() {
             <button
               key={link.href}
               id={`nav-${link.href}`}
-              onClick={() => scrollTo(link.href)}
+              onClick={() => {
+                if (window.location.pathname !== '/') {
+                  window.location.href = `/#${link.href}`;
+                } else {
+                  scrollTo(link.href);
+                }
+              }}
               style={{
                 padding: "0.5rem 1.1rem",
                 borderRadius: "999px",
@@ -134,6 +141,25 @@ export default function Navbar() {
               {link.label}
             </button>
           ))}
+          
+          <Link
+            href="/blog"
+            style={{
+              padding: "0.5rem 1.1rem",
+              borderRadius: "999px",
+              border: "none",
+              background: "transparent",
+              color: "var(--cyan)",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.9rem",
+              fontWeight: 500,
+              cursor: "pointer",
+              transition: "all 0.2s ease",
+              textDecoration: "none",
+            }}
+          >
+            Blog
+          </Link>
 
           <a
             href="https://github.com/r1verrdao"
@@ -238,7 +264,13 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06 }}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => {
+                  if (window.location.pathname !== '/') {
+                    window.location.href = `/#${link.href}`;
+                  } else {
+                    scrollTo(link.href);
+                  }
+                }}
                 style={{
                   textAlign: "left",
                   padding: "0.85rem 1.2rem",
@@ -256,6 +288,33 @@ export default function Navbar() {
                 {link.label}
               </motion.button>
             ))}
+            
+            <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: navLinks.length * 0.06 }}
+            >
+              <Link
+                href="/blog"
+                style={{
+                  display: "block",
+                  textAlign: "left",
+                  padding: "0.85rem 1.2rem",
+                  borderRadius: "10px",
+                  border: "none",
+                  background: "transparent",
+                  color: "var(--cyan)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                  cursor: "pointer",
+                  width: "100%",
+                  textDecoration: "none",
+                }}
+              >
+                Blog
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

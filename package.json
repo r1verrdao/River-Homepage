@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^3.35.0",
+    "@content-collections/core": "^0.15.1",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.11",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@react-three/drei": "^10.7.7",
@@ -19,7 +22,8 @@
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "three": "^0.184.0"
+    "three": "^0.184.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
