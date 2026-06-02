@@ -10,8 +10,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const post = allPosts.find((p) => p.slug === resolvedParams.slug);
   if (!post) return {};
   return {
     title: `${post.title} | Rêveur Blog`,
@@ -19,8 +20,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((p) => p.slug === params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const post = allPosts.find((p) => p.slug === resolvedParams.slug);
   if (!post) {
     notFound();
   }
