@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://r1verrdao.id.vn"),
   title: "Rêveur | DAO Duy Manh Ha — AI Engineer",
   description:
     "Portfolio of DAO Duy Manh Ha (Rêveur) — AI Engineer & ML Researcher at eUp Technology, Master in AI at QUT. Computer Vision, NLP, Deep Learning, and the cosmos.",
