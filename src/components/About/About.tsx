@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import StarParticles from "../effects/StarParticles";
+import avatarImg from "../../../../public/IMG_6250(1).JPG";
 
 const stats = [
   { value: "3.6", label: "GPA / 4.0 at USTH", icon: "🎓" },
@@ -75,7 +76,6 @@ export default function About() {
                 }}
               />
 
-              {/* Avatar circle */}
               <div
                 style={{
                   width: "100%",
@@ -93,7 +93,7 @@ export default function About() {
                 }}
               >
                 <Image
-                  src="/IMG_6250(1).JPG"
+                  src={avatarImg}
                   alt="DAO Duy Manh Ha"
                   width={280}
                   height={280}
