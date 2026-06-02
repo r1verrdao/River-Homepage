@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/thumbnail.png",
-        width: 1200,
-        height: 630,
+        width: 1920,
+        height: 1022,
         alt: "Rêveur Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rêveur | DAO Duy Manh Ha",
-    description: "AI Engineer & Astronomer — Exploring intelligence and the cosmos.",
+    title: "DAO Duy Manh Ha | Homepage ",
+    description: "River's Portfolio",
     images: ["/thumbnail.png"],
   },
 };
