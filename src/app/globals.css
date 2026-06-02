@@ -289,3 +289,6 @@ canvas {
   padding: 0;
 }
 
+.back-link:hover {
+  text-shadow: 0 0 10px var(--cyan-glow);
+}

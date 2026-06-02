@@ -36,6 +36,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <article className="container" style={{ position: "relative", zIndex: 10, maxWidth: "800px" }}>
         <Link 
           href="/blog" 
+          className="back-link"
           style={{ 
             color: "var(--cyan)", 
             textDecoration: "none", 
@@ -45,12 +46,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             fontSize: "0.95rem",
             fontWeight: 500,
             transition: "all 0.2s ease"
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.textShadow = "0 0 10px var(--cyan-glow)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.textShadow = "none";
           }}
         >
           ← Back to Blog
