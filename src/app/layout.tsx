@@ -25,6 +25,21 @@ export const metadata: Metadata = {
     title: "Rêveur | DAO Duy Manh Ha",
     description: "AI Engineer & Astronomer — Exploring intelligence and the cosmos.",
     type: "website",
+    url: "https://r1verrdao.id.vn/",
+    images: [
+      {
+        url: "/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Rêveur Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rêveur | DAO Duy Manh Ha",
+    description: "AI Engineer & Astronomer — Exploring intelligence and the cosmos.",
+    images: ["/thumbnail.png"],
   },
 };
 
