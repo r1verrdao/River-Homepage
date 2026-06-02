@@ -15,7 +15,7 @@ const projects = [
     description:
       "Research at ICTLab, USTH: Deep learning pipeline for fusing PET and MRI medical images. Novel enhancement method using histogram equalization, noise removal, and structural similarity index.",
     tech: ["Python", "PyTorch", "Deep Learning", "Image Processing", "OpenCV"],
-    links: { github: "https://github.com/r1verrdao", live: null },
+    links: { github: null, live: null },
     featured: true,
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     description:
       "End-to-end OCR system for Vietnamese text. Uses YOLOv8 for text detection and VietOCR for recognition. Fine-tuned VGG19+Transformer and VGG19+Seq2Seq models for improved accuracy.",
     tech: ["Python", "YOLOv8", "PyTorch", "VietOCR", "Transformer"],
-    links: { github: "https://github.com/r1verrdao", live: null },
+    links: { github: null, live: null },
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ const projects = [
     description:
       "Machine learning platform to train and run inference on models predicting necessary nutrition amounts for rice plants. Includes data pre-processing pipelines and model evaluation.",
     tech: ["Python", "Scikit-learn", "PyTorch", "Pandas", "Numpy"],
-    links: { github: "https://github.com/r1verrdao", live: null },
+    links: { github: null, live: null },
     featured: false,
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     description:
       "ResNet50-based image classifier achieving 80% accuracy for bird species and 95% accuracy for ant/bee classification. Fine-tuned with transfer learning on custom datasets.",
     tech: ["Python", "PyTorch", "ResNet50", "Transfer Learning"],
-    links: { github: "https://github.com/r1verrdao", live: null },
+    links: { github: null, live: null },
     featured: false,
   },
   {
@@ -67,7 +67,7 @@ const projects = [
     description:
       "Research and implementation (from scratch) of several classical and modern noise removal methods for digital images. Comprehensive benchmarking across PSNR, SSIM metrics.",
     tech: ["Python", "OpenCV", "Numpy", "MATLAB", "Scikit-image"],
-    links: { github: "https://github.com/r1verrdao", live: null },
+    links: { github: null, live: null },
     featured: false,
   },
   {
@@ -80,7 +80,7 @@ const projects = [
     description:
       "The very site you're exploring — built with Next.js, Framer Motion, and Three.js to render a live galaxy simulation. Astronomy-themed dark UI with glassmorphism design.",
     tech: ["Next.js", "Three.js", "Framer Motion", "TypeScript"],
-    links: { github: "https://github.com/r1verrdao", live: "#" },
+    links: { github: "https://github.com/r1verrdao/River-Homepage", live: "#" },
     featured: false,
   },
 ];
@@ -122,7 +122,7 @@ export default function Projects() {
               marginBottom: "1rem",
             }}
           >
-            Launched <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p
             style={{
@@ -133,7 +133,7 @@ export default function Projects() {
               fontFamily: "var(--font-body)",
             }}
           >
-            Each project is a mission — planned, launched, and aimed at the stars.
+            Here are some of my featured projects. 
           </p>
         </motion.div>
 
@@ -310,6 +310,7 @@ export default function Projects() {
 
               {/* Links */}
               <div style={{ display: "flex", gap: "0.75rem" }}>
+                {project.links.github && (
                 <a
                   href={project.links.github}
                   target="_blank"
@@ -341,6 +342,7 @@ export default function Projects() {
                 >
                   ↗ GitHub
                 </a>
+                )}
                 {project.links.live && (
                   <a
                     href={project.links.live}

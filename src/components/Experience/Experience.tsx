@@ -39,6 +39,7 @@ const experiences: ExperienceItem[] = [
       "Implemented from scratch a novel image enhancement method based on histogram equalization & noise removal.",
       "Proposed a new pipeline combining enhancement techniques and deep learning to synthesize MRI and PET images.",
       "Enhanced edge preservation and structural similarity index from source to fused images using the proposed fusion technique.",
+      "Github: https://github.com/r1verrdao/Img-enhancement"
     ],
   },
 ];

@@ -172,8 +172,8 @@ export default function About() {
               }}
             >
               Hi! I&apos;m <strong style={{ color: "var(--star-white)" }}>DAO Duy Manh Ha</strong>,
-              known as <strong style={{ color: "var(--cyan)" }}>Rêveur</strong> — French for &quot;Dreamer&quot;.
-              I&apos;m an AI Engineer &amp; ML Researcher based in Hanoi, Vietnam, currently working at
+              known as <strong style={{ color: "var(--cyan)" }}>Rêveur</strong>.
+              I&apos;m an AI Engineer &amp; ML Researcher based in Hanoi, Vietnam, previously worked at
               <strong style={{ color: "var(--star-white)" }}> eUp Technology JSC</strong> and pursuing a
               <strong style={{ color: "var(--star-white)" }}> Master in AI at QUT</strong> (Feb 2026).
             </motion.p>

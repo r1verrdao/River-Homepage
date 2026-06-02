@@ -192,7 +192,7 @@ export default function Hero() {
             textShadow: "0 1px 10px rgba(3,2,10,0.95), 0 0 30px rgba(3,2,10,0.8)",
           }}
         >
-          AI Engineer & ML Researcher based in Hanoi, Vietnam — building intelligent systems
+          AI Engineer based in Hanoi, Vietnam — building intelligent systems
           from Computer Vision to NLP, while finding inspiration in the endless mysteries of the cosmos.
         </motion.p>
 

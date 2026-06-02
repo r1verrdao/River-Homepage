@@ -7,6 +7,7 @@ import StarParticles from "../effects/StarParticles";
 const socials = [
   { label: "GitHub", icon: "⌥", href: "https://github.com/r1verrdao", color: "var(--star-white)" },
   { label: "LinkedIn", icon: "in", href: "https://linkedin.com/in/riverdao36", color: "var(--cyan)" },
+  { label: "Facebook", icon: "f", href: "https://www.facebook.com/riverdao03/", color: "#4267B2" },
   { label: "Email", icon: "@", href: "mailto:riverdao36@gmail.com", color: "var(--purple)" },
 ];
 
@@ -25,6 +26,10 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const { name, email, message } = formState;
+    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+    const body = encodeURIComponent(`Hi Ha,\n\n${message}\n\n— ${name} (${email})`);
+    window.open(`mailto:riverdao36@gmail.com?subject=${subject}&body=${body}`, "_blank");
     setSent(true);
     setTimeout(() => setSent(false), 3000);
     setFormState({ name: "", email: "", message: "" });
@@ -328,7 +333,7 @@ export default function Contact() {
                   boxShadow: sent ? "none" : "0 0 30px var(--cyan-glow)",
                 }}
               >
-                {sent ? "✓ Message Transmitted!" : "Launch Message 🚀"}
+                {sent ? "✓ Message Sent!" : "Send Message 📩"}
               </button>
             </form>
           </motion.div>
