@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import StarParticles from "../effects/StarParticles";
-import avatarImg from "../../../public/avatar.JPG";
+import avatarImg from "../../assets/avatar.JPG";
 
 const stats = [
   { value: "3.6", label: "GPA / 4.0 at USTH", icon: "🎓" },
