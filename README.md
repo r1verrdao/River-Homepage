@@ -1,5 +1,9 @@
 # Rêveur | Personal Portfolio & Blog 🌌
 
+<p align="center">
+  <img src="public/thumbnail.png" alt="Rêveur Portfolio Thumbnail" width="100%" />
+</p>
+
 A modern, fast, and visually stunning personal portfolio and blog built with **Next.js**, **React**, **Three.js**, and **Content Collections**.
 
 ## 🚀 Features
@@ -17,30 +21,9 @@ A modern, fast, and visually stunning personal portfolio and blog built with **N
 - **3D Graphics:** Three.js / React Three Fiber
 - **Content:** Content Collections (`@content-collections/core`)
 
-## 📝 How to Write a New Blog Post
+## 📝 Blog Authoring Guide
 
-Writing a new blog post is incredibly easy. Everything is managed locally in your codebase via Markdown (`.mdx`) files.
-
-1. Navigate to the `src/content/blog/` directory.
-2. Create a new `.mdx` file (e.g., `my-new-post.mdx`).
-3. Add the required frontmatter at the top of the file:
-
-```yaml
----
-title: "My Journey into Artificial Intelligence"
-summary: "A brief reflection on my AI studies."
-date: "2024-05-18"
-tags: ["AI", "Machine Learning"]
----
-```
-
-4. Write your content below the frontmatter using standard Markdown. You can include:
-   - `**bold**` and `*italic*` text
-   - Headings (`##`, `###`)
-   - Code blocks with language highlights (e.g., ` ```python `)
-   - Lists (`- item 1`)
-
-5. **Deploy!** Once you commit and push to GitHub, GitHub Actions will automatically compile the Markdown and publish your post.
+Please refer to the [**BLOG_GUIDE.md**](./BLOG_GUIDE.md) file for comprehensive instructions on how to write, format, and publish new blog posts (including how to add images and code blocks).
 
 ## 💻 Local Development
 

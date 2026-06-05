@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { MDXContent } from "@content-collections/mdx/react";
 import Link from "next/link";
 import StarParticles from "../../../components/effects/StarParticles";
+import DiskGalaxies from "../../../components/effects/DiskGalaxies";
+import ShootingStars from "../../../components/effects/ShootingStars";
+import TableOfContents from "../../../components/Blog/TableOfContents";
 
 export function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -33,34 +36,38 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       {/* Background */}
       <div className="nebula-purple" style={{ top: "0%", left: "15%", opacity: 0.3 }} />
       <div className="nebula-cyan" style={{ bottom: "10%", right: "-5%", opacity: 0.25 }} />
-      <StarParticles count={20} />
+      <DiskGalaxies />
+      <ShootingStars />
+      <StarParticles count={30} />
 
       <article
         className="container"
-        style={{ position: "relative", zIndex: 10, maxWidth: "780px" }}
+        style={{ position: "relative", zIndex: 10, maxWidth: "1400px" }}
       >
         {/* Back link */}
-        <Link
-          href="/blog"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.4rem",
-            color: "var(--cyan)",
-            textDecoration: "none",
-            marginBottom: "2.5rem",
-            fontFamily: "var(--font-body)",
-            fontSize: "0.9rem",
-            fontWeight: 500,
-            opacity: 0.8,
-            transition: "opacity 0.2s",
-          }}
-        >
-          ← Back to Blog
-        </Link>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <Link
+            href="/blog"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              color: "var(--cyan)",
+              textDecoration: "none",
+              marginBottom: "2.5rem",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.9rem",
+              fontWeight: 500,
+              opacity: 0.8,
+              transition: "opacity 0.2s",
+            }}
+          >
+            ← Back to Blog
+          </Link>
+        </div>
 
         {/* Header */}
-        <header style={{ marginBottom: "3rem" }}>
+        <header style={{ maxWidth: "900px", margin: "0 auto 3rem auto" }}>
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
             <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "1.25rem" }}>
@@ -124,9 +131,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </header>
 
-        {/* Content */}
-        <div className="glass blog-content" style={{ padding: "2.5rem 3rem", borderRadius: "24px" }}>
-          <MDXContent code={post.mdx} />
+        {/* Content & TOC Grid */}
+        <div className="blog-post-layout">
+          <div className="glass blog-content blog-card-animate blog-post-main" style={{ padding: "2.5rem 3rem", borderRadius: "24px" }}>
+            <MDXContent code={post.mdx} />
+          </div>
+
+          <aside className="blog-toc-sidebar">
+            <TableOfContents />
+          </aside>
         </div>
 
         {/* Footer nav */}

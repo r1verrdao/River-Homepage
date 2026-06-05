@@ -47,7 +47,7 @@ export default function Footer() {
         </span>
         {" "}·{" "}
         <span style={{ color: "rgba(232,234,246,0.2)" }}>
-          Somewhere between the stars and the terminal
+          Somewhere in the universe
         </span>
       </p>
 

@@ -1,11 +1,14 @@
 import Link from "next/link";
 import StarParticles from "../../components/effects/StarParticles";
+import DiskGalaxies from "../../components/effects/DiskGalaxies";
+import ShootingStars from "../../components/effects/ShootingStars";
+import BlogSubtitle from "../../components/Blog/BlogSubtitle";
 import { allPosts } from "content-collections";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | Rêveur",
-  description: "Writings on AI, Machine Learning, and the cosmos.",
+  description: "A place where I write my thoughts on life, universe, and everything in between.",
 };
 
 export default function BlogList() {
@@ -18,7 +21,9 @@ export default function BlogList() {
       {/* Background effects */}
       <div className="nebula-purple" style={{ top: "5%", left: "-10%", opacity: 0.45 }} />
       <div className="nebula-cyan" style={{ bottom: "10%", right: "-8%", opacity: 0.3 }} />
-      <StarParticles count={30} />
+      <DiskGalaxies />
+      <ShootingStars />
+      <StarParticles count={65} />
 
       <div className="container" style={{ position: "relative", zIndex: 10, maxWidth: "860px" }}>
 
@@ -35,20 +40,9 @@ export default function BlogList() {
               marginBottom: "1.25rem",
             }}
           >
-            My <span className="gradient-text">Digital Garden</span>
+            My <span className="gradient-text-shimmer">Blog</span>
           </h1>
-          <p
-            style={{
-              color: "rgba(232,234,246,0.6)",
-              fontSize: "1.1rem",
-              lineHeight: 1.7,
-              fontFamily: "var(--font-body)",
-              maxWidth: "520px",
-            }}
-          >
-            Exploring artificial intelligence, code, and the universe —
-            one post at a time.
-          </p>
+          <BlogSubtitle />
 
           {/* Stats row */}
           <div
@@ -82,13 +76,14 @@ export default function BlogList() {
             return (
               <Link key={post.slug} href={`/blog/${post.slug}`} style={{ textDecoration: "none" }}>
                 <article
-                  className="glass project-card"
+              className="glass project-card blog-card-animate"
                   style={{
                     padding: "2rem 2.25rem",
                     borderRadius: "20px",
                     display: "block",
                     position: "relative",
                     overflow: "hidden",
+                    animationDelay: `${i * 0.15}s`,
                   }}
                 >
                   {/* Accent line */}
@@ -104,6 +99,8 @@ export default function BlogList() {
                         ? "linear-gradient(180deg, var(--cyan), var(--purple))"
                         : "linear-gradient(180deg, var(--purple), var(--pink))",
                       opacity: 0.7,
+                      animation: "accent-pulse 3s ease-in-out infinite",
+                      animationDelay: `${i * 0.5}s`,
                     }}
                   />
 
